@@ -233,3 +233,7 @@ function displayForecast(currentCity) {
 function showForecast() {
     document.getElementById("forecast-container").style.display = "inline-block";
 };
+
+// call functions to reload or open the page
+searchHistory();
+displayDate();
