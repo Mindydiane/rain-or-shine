@@ -76,3 +76,13 @@ function searchHistory() {
     }
 };
 // Render search history End
+
+// Clear history Start
+clearHistory.addEventListener('click', function() {
+    var accept = confirm('Search History will be cleared! Do you want to proceed?');
+    if (accept === true) {
+        localStorage.clear();
+        window.location.reload();
+    }
+});
+// Clear history End
