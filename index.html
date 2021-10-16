@@ -4,13 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- styling links-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" />
     <link rel="stylesheet" href="./assets/css/style.css"/> 
-    <title>Document</title>
+    <!-- title -->
+    <title>Weather Forecast</title>
 </head>
-<body>
-    <header>
-        <h1 class="center">Weather Dashboard</h1>
-
+<body class="d-flex flex-column h-100">
+    <header class="navbar custom-header navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <h1 class="navbar-brand custom-header-text" href="#">Weather Forecast Dashboard</h1>
+            <span id="current-date" class="d-flex"></span>
+    </div>
     </header>
 
     <script src="./assets/js/script.js"></script>
