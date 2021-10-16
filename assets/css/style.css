@@ -5,6 +5,7 @@
 .custom-header {
     align-items:center;
     justify-content: center;
+    background-color: midnightblue;
 }
 
 .custom-header-text {

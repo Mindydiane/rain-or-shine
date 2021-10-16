@@ -125,7 +125,7 @@ function displayCurrentWeather(currentCity) {
     // display city as a header on current weather area
     cityDisplayed.innerHTML = currentCity;
     // fetch first data from weather api
-    featch('https://api.openweathermap.org/data/2.5/weather?q='
+    fetch('https://api.openweathermap.org/data/2.5/weather?q='
     + currentCity
     + '&appid='
     + apiKey
