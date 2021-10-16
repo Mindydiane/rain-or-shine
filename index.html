@@ -1,57 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- styling links-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" />
-    <link rel="stylesheet" href="./assets/css/style.css"/> 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <!-- title -->
     <title>Weather Forecast</title>
-</head>
-<body class="d-flex flex-column h-100">
+  </head>
+  <body class="d-flex flex-column h-100">
     <!-- header starts here-->
     <header class="navbar custom-header navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <h1 class="navbar-brand custom-header-text" href="#">Weather Forecast Dashboard</h1>
-            <span id="current-date" class="d-flex"></span>
-    </div>
+      <div class="container">
+        <h1 class="navbar-brand custom-header-text" href="#">
+          Weather Forecast Dashboard
+        </h1>
+        <span id="current-date" class="d-flex"></span>
+      </div>
     </header>
     <!-- header ends here-->
 
     <main class="container-fluid flex-shrink-0">
-        <div class="row">
-
-            <!-- left side, search form and history area-->
-            <div class="col-md-4 search-column">
-                <!-- search form -->
-                <div class="card card-custom">
-                    <h3 class="card-header text-uppercase">
-                    Search By City
-                    </h3>
-                    <form id="search-form" class="form-inline form-custom">
-                        <div class="form-group mx-sm-3 mb-2">
-                            <input type="city" class="field-custom form-control" id="city-input"
-                            placeholder="City Name"    
-                        </div>
-                        <!-- submit button -->
-                        <button type="submit" class="btn btn-primary mb-2">
-                            <span class="oi oi-magnifying-glass"></span></button>
-                    </form>
-                </div>
-
+      <div class="row">
+        <!-- left side, search form and history area-->
+        <div class="col-md-4 search-column">
+          <!-- search form -->
+          <div class="card card-custom">
+            <h3 class="card-header text-uppercase">Search By City</h3>
+            <form id="search-form" class="form-inline form-custom">
+              <div class="form-group mx-sm-3 mb-2">
+                <input type="city" class="field-custom form-control"
+                id="city-input" placeholder="City Name"
+              </div>
+              <!-- submit button -->
+              <button type="submit" class="btn btn-primary mb-2">
+                <span class="oi oi-magnifying-glass"></span>
+              </button>
+            </form>
+          </div>
+          <!-- history card-->
+          <div class="card previous-searches mt-md-5">
+            <div class="card-header">Search History</div>
+            <br />
+            <ul id="history" class="list-group list-group-flush"></ul>
+            <div class="card-footer" id="clear">
+              <button class="btn btn-outline-primary btn-lg btn-block city-btn">
+                Clear Search History
+              </button>
             </div>
-
-
+          </div>
         </div>
+      </div>
     </main>
 
     <script src="./assets/js/script.js"></script>
-</body>
+  </body>
 </html>
