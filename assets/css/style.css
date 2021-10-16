@@ -21,3 +21,10 @@
     margin-top: 10px;
 }
 /* end form */
+
+/* start today style */
+#currentDay {
+    font-size: 1.6rem;
+    color: rgba(0, 0, 0, 0.7);
+}
+/* end today style */
