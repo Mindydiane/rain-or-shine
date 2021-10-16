@@ -228,3 +228,8 @@ function displayForecast(currentCity) {
     })
 };
 // 5 day forecast End
+
+// show the weather forecast
+function showForecast() {
+    document.getElementById("forecast-container").style.display = "inline-block";
+};
