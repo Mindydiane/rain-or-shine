@@ -10,3 +10,9 @@
 .custom-header-text {
     font-size: 3rem;
 }
+#current-date {
+    color: azure;
+    font-size: 1.5rem;
+}
+/* end header */
+
