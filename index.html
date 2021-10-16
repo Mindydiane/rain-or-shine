@@ -69,6 +69,30 @@
             </div>
           </div>
         </div>
+        <!-- start right side, searched city today and future forecast -->
+        <div class="col-md-8" id="forecast-container">
+            <!-- start today's forecast -->
+            <div class="card">
+                <!-- searched city header -->
+                <h2 id="current-city-displayed" class="card-header"></h2>
+                <!-- searched city today's forecast information -->
+                <div class="card-body">
+                    <h4 class="card-title">
+                        Current Weather as of
+                    </h4>
+                    <span id="currentDay"></span>
+                    <div id="weather-condition"></div>
+                </div>
+                <img src="" alt="weather icon" id="weather-icon">
+            </div>
+            <p class="card-text"><strong>Temperature: </strong>
+                <span id="current-city-temp"></span>&#8457;
+            </p>
+            <p class="card-text"><strong>Humidity: </strong>
+                <span id="current-city-humidity"></span>%
+            </p>
+        </div>
+
       </div>
     </main>
 
