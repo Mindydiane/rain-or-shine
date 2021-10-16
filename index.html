@@ -71,35 +71,68 @@
         </div>
         <!-- start right side, searched city today and future forecast -->
         <div class="col-md-8" id="forecast-container">
-            <!-- start today's forecast -->
-            <div class="card">
-                <!-- searched city header -->
-                <h2 id="current-city-displayed" class="card-header"></h2>
-                <!-- searched city today's forecast information -->
-                <div class="card-body">
-                    <h4 class="card-title">
-                        Current Weather as of
-                    </h4>
-                    <span id="currentDay"></span>
-                    <div id="weather-condition"></div>
-                </div>
-                <img src="" alt="weather icon" id="weather-icon">
+          <!-- start today's forecast -->
+          <div class="card">
+            <!-- searched city header -->
+            <h2 id="current-city-displayed" class="card-header"></h2>
+            <!-- searched city today's forecast information -->
+            <div class="card-body">
+              <h4 class="card-title">Current Weather as of</h4>
+              <span id="currentDay"></span>
+              <div id="weather-condition"></div>
             </div>
-            <p class="card-text"><strong>Temperature: </strong>
-                <span id="current-city-temp"></span>&#8457;
-            </p>
-            <p class="card-text"><strong>Humidity: </strong>
-                <span id="current-city-humidity"></span>%
-            </p>
-            <p class="card-text"><strong>Wind Speed: </strong>
-                <span id="current-city-wind"></span>MPH
-            </p>
-            <p class="card-text"><strong>UV Index: </strong>
-                <span id="current-city-uv"></span> as of 12:00 PM   
-            </p>
+            <img src="" alt="weather icon" id="weather-icon" />
+          </div>
+          <p class="card-text">
+            <strong>Temperature: </strong>
+            <span id="current-city-temp"></span>&#8457;
+          </p>
+          <p class="card-text">
+            <strong>Humidity: </strong>
+            <span id="current-city-humidity"></span>%
+          </p>
+          <p class="card-text">
+            <strong>Wind Speed: </strong>
+            <span id="current-city-wind"></span>MPH
+          </p>
+          <p class="card-text">
+            <strong>UV Index: </strong> <span id="current-city-uv"></span> as of
+            12:00 PM
+          </p>
         </div>
       </div>
-      
+      <br />
+      <!-- start 5 day forecast -->
+      <div class="card">
+        <div class="card-header five-day-header">5 Day Forecast</div>
+        <div class="row mx-0" id="five-day-container">
+          <!-- day 1 -->
+          <div
+            id="five-day-1"
+            class="card text-white bg-secondary mb-2"
+            style="max-width: 9rem; text-align: center"
+          >
+            <!-- date area -->
+            <div id="date1" class="card-header"></div>
+            <div class="card-body">
+              <!-- forecast icon -->
+              <div>
+                <img src="" alt="forecast icon" class="forecast-icon" />
+              </div>
+              <!-- temperature -->
+              <p class="card-text">
+                <strong>High Temp: </strong>
+                <span class="card-text forecast-temp"></span>
+              </p>
+              <!-- humidity -->
+              <p class="card-text">
+                <strong>Humidity: </strong>
+                <span class="card-text forecast-humidity"></span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
 
     <script src="./assets/js/script.js"></script>
