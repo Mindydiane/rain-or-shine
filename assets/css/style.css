@@ -28,3 +28,19 @@
     color: rgba(0, 0, 0, 0.7);
 }
 /* end today style */
+
+/* start 5 day style */
+.five-day-header {
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+#five-day-container {
+    justify-content: space-between;
+}
+
+#forecast-container {
+    display: none;
+}
+/* end 5 day */
