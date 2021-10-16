@@ -1,17 +1,12 @@
 *{
     margin: 0;
 }
-/* center header */
-header {
-    background: #4169E1;
-    color: #FFFAFA;
-    
+/* start header */
+.custom-header {
+    align-items:center;
+    justify-content: center;
 }
 
-.center {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
+.custom-header-text {
+    font-size: 3rem;
 }
