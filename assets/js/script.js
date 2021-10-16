@@ -13,7 +13,7 @@ var currentWeatherCondition = document.getElementById('weather-condition');
 var citiesArray = JSON.parse(localStorage.getItem('cities')) || [];
 var apiKey = '82779e5fe53a4fa9c43d478dfdbebc25';
 
-// search city
+// Search city Start
 function formSubmitHandler(event) {
     event.preventDefault();
     var currentCity = cityInputField
@@ -54,6 +54,25 @@ function formSubmitHandler(event) {
         alert('Please enter a city name');
     }
 };
-// call function on click
+// Call function on click
 searchField.addEventListener("submit", formSubmitHandler);
-// city search end
+// City search End
+
+// Render search history Start
+function searchHistory() {
+    for (let i = 0; i < citiesArray.length; i++) {
+        var newBtn = document.createElement("button");
+        previousSearches.appendChild(newBtn);
+        newBtn.classList = "btn btn-outline-primary btn-lg btn-block city-btn";
+        newBtn.setAttribute("id", "city-" + citiesArray[i])
+        newBtn.innerHTML = citiesArray[i];
+        // call function to render weather for the click btn
+        newBtn.onclick = function (event) {
+            var city = event.target.textContent;
+            displayCurrentWeather(city);
+            displayForecast(city);
+            showForecast();
+        }
+    }
+};
+// Render search history End
