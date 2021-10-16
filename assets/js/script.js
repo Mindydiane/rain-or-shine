@@ -12,3 +12,48 @@ var currentCityIcon = document.getElementById('weather-icon');
 var currentWeatherCondition = document.getElementById('weather-condition');
 var citiesArray = JSON.parse(localStorage.getItem('cities')) || [];
 var apiKey = '82779e5fe53a4fa9c43d478dfdbebc25';
+
+// search city
+function formSubmitHandler(event) {
+    event.preventDefault();
+    var currentCity = cityInputField
+    .value
+    .trim();
+
+    // check to see if any city was entered
+    if (currentCity) {
+        // check to see if searched city was searched before
+        if (citiesArray.indexOf(currentCity)=== -1) {
+            //if not in localStorage push the array and save
+            citiesArray.push(currentCity);
+            cityDisplayed.innerHTML = currentCity;
+            localStorage.setItem("cities", JSON.stringify(citiesArray));
+            // create a new button to search city
+            var newBtn = document.createElement("button");
+            newBtn.classList = "btn btn-outline-primary btn-lg btn-block city-btn";
+            newBtn.setAttribute("id", "city-" + currentCity)
+            newBtn.innerHTML = currentCity;
+            // append it to history
+            previousSearches.appendChild(newBtn);
+            newBtn.setAttribute("value", currentCity);
+            newBtn.onclick = function (event) {
+                var city = $(this).attr("value"); // after setting the attribute, use jQuery to target attribute
+                // call function to show the weather
+                displayCurrentWeather(city);
+                displayForecast(city);
+                showForecast();
+            }
+        };
+        // clear search form
+        cityInputField.value = "";
+        // call function to show the weather
+        displayCurrentWeather(currentCity);
+        displayForecast(currentCity);
+        showForecast();
+    } else {
+        alert('Please enter a city name');
+    }
+};
+// call function on click
+searchField.addEventListener("submit", formSubmitHandler);
+// city search end
