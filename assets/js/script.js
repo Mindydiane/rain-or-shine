@@ -181,3 +181,50 @@ function displayCurrentWeather(currentCity) {
     })
 }
 // Current weather End
+
+// 5 day forecast Start
+function displayForecast(currentCity) {
+    // fetch forecast data
+    fetch('https://api.openweathermap.org/data/2.5/forecast?q='
+    + currentCity
+    + '&appid='
+    + apiKey
+    + '&units=imperial'
+)
+    .then(function (forecastResponse) {
+        if (forecastResponse.ok) {
+            forecastResponse.json().then(function (forecastResponse) {
+              // initalize an array to save the data needed
+              var dates = [];
+              // itterate thru weather api data and choose what we need
+              for (let i = 0; i < forecastResponse.list.length; i++) {
+                  // create a variable to use only the data as of 3pm
+                  var certainTimeData = forecastResponse.list[i]["dt_txt"].split(" ")[1].split(":")[0] == 15;
+                  if (certainTimeData) {
+                      // populate w/weather data from this object
+                      dates.push(forecastResponse.list[i]);
+                  }
+              };
+              console.log(dates); 
+
+            // go thru newly created array of certainTimeData and render the info in forecast cards 
+              for (let i = 0; i < dates.length; i++) {
+                  var cardData = document.getElementsByClassName("forecast-temp");
+                  cardData[i].innerHTML = Math.round(dates[i].main.temp) + "&#8457";
+                  //humidity
+                  var cardHumidity = document.getElementsByClassName("forecast-humidity");
+                  cardHumidity[i].innerHTML = dates[i].main.humidity + "%";
+                  // icons
+                  var cardIcon = document.getElementsByClassName("forecast-icon");
+                  var cardIconId = "http://openweathermap.org/img/w/"
+                        + cardIconId
+                        + ".png";
+                    cardIcon[i].setAttribute("src", cardIconUrl);     
+              }
+            })
+        } else {
+            return;
+        }
+    })
+};
+// 5 day forecast End
