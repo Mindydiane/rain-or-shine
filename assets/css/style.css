@@ -1,11 +1,14 @@
-*{
-    margin: 0;
-}
+
 /* start header */
 .custom-header {
     align-items:center;
     justify-content: center;
-    background-color: midnightblue;
+    background-image: linear-gradient(
+        45deg,
+        #12248f 5%,
+        #0b2ce6 52%,
+        midnightblue 90%
+    );
     color: azure;
 }
 
@@ -43,6 +46,7 @@
 }
 
 #forecast-container {
-    display: none;
+    /* align-self: flex-end */
+    display: contents;
 }
 /* end 5 day */
