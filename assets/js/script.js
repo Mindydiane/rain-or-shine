@@ -89,6 +89,7 @@ clearHistory.addEventListener('click', function() {
 
 // Create Dates and times across the page Start
 function displayDate() {
+    
     // header
     var todayDate = moment().format('dddd, MMMM Do');
     var todayEl = $('#current-date');
@@ -117,6 +118,7 @@ function displayDate() {
     var fiveDay5 = moment().add(5, 'day').format('l')
     var forecastDate5 = $('#date5');
     forecastDate5.test(fiveDay5);
+    
 };
 // Create dates and times across page End
 
