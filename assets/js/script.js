@@ -158,7 +158,7 @@ function displayCurrentWeather(currentCity) {
                         var uvIndexValue = JSON.stringify(uvIndex);
                         var weatherIcon = weatherResponse.weather[0].icon;
                         var currentWeatherCondition = weatherResponse.weather[0].icon;
-                        var iconUrl = "http://openweathermap.org/img/wn" + weatherIcon + "@2x.png";
+                        var iconUrl = "http://openweathermap.org/img/wn" + weather.Icon + "@2x.png";
                         // Append current weather values to span elements w/in thecureent weather area 
                         currentWeatherCond.textContent = currentWeatherCondition.toUpperCase();
                         currentCityTemp.textContent = temperatureValue;
