@@ -11,7 +11,7 @@ var currentCityUV = document.getElementById('current-city-uv');
 var currentCityIcon = document.getElementById('weather-icon');
 var currentWeatherCondition = document.getElementById('weather-condition');
 var citiesArray = JSON.parse(localStorage.getItem('cities')) || [];
-var apiKey = '82779e5fe53a4fa9c43d478dfdbebc25';
+var apiKey = '565327615c0c1d1d92161713c214a0cc';
 
 // Search city Start
 function formSubmitHandler(event) {
