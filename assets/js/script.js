@@ -9,9 +9,9 @@ var currentCityHumidity = document.getElementById("current-city-humidity");
 var currentCityWind = document.getElementById("current-city-wind");
 var currentCityUV = document.getElementById("current-city-uv");
 var currentCityIcon = document.getElementById("weather-icon");
-var currentWeatherCondition = document.getElementById("weather-condition");
+var currentWeatherCond = document.getElementById("weather-condition");
 var citiesArray = JSON.parse(localStorage.getItem("cities")) || [];
-var apiKey = "82779e5fe53a4fa9c43d478dfdbebc25";
+var apiKey = "565327615c0c1d1d92161713c214a0cc";
 
 // Search city Start
 function formSubmitHandler(event) {
@@ -97,20 +97,20 @@ function displayDate() {
   // 5 day forecast
   var fiveDay1 = moment().add(1, "day").format("l");
   var forecastDate1 = $("#date1");
-  forecastDate1.test(fiveDay1);
+  forecastDate1.text(fiveDay1);
   var fiveDay2 = moment().add(2, "day").format("l");
   var forecastDate2 = $("#date2");
-  forecastDate2.test(fiveDay2);
+  forecastDate2.text(fiveDay2);
   var fiveDay3 = moment().add(3, "day").format("l");
   var forecastDate3 = $("#date3");
-  forecastDate3.test(fiveDay3);
+  forecastDate3.text(fiveDay3);
   var fiveDay4 = moment().add(4, "day").format("l");
   var forecastDate4 = $("#date4");
-  forecastDate4.test(fiveDay4);
+  forecastDate4.text(fiveDay4);
 
   var fiveDay5 = moment().add(5, "day").format("l");
   var forecastDate5 = $("#date5");
-  forecastDate5.test(fiveDay5);
+  forecastDate5.text(fiveDay5);
 }
 // Create dates and times across page End
 
